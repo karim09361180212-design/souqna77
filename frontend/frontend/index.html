@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+  />
+
+  <meta
+    name="description"
+    content="سوقنا - منصة الإعلانات المبوبة العربية"
+  />
+
+  <meta name="theme-color" content="#0f172a" />
+
+  <title>سوقنا | منصة الإعلانات المبوبة</title>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-container">
+
+      <a href="#" class="logo">
+        سوقنا
+      </a>
+
+      <nav class="nav">
+        <a href="#home">الرئيسية</a>
+        <a href="#categories">الأقسام</a>
+        <a href="#listings">الإعلانات</a>
+        <a href="#about">عن سوقنا</a>
+      </nav>
+
+      <div class="header-actions">
+        <button
+          class="btn btn-outline"
+          id="loginButton"
+          type="button"
+        >
+          تسجيل الدخول
+        </button>
+
+        <button
+          class="btn btn-primary"
+          id="addListingButton"
+          type="button"
+        >
+          + أضف إعلاناً
+        </button>
+      </div>
+
+      <button
+        class="mobile-menu-button"
+        id="mobileMenuButton"
+        type="button"
+        aria-label="فتح القائمة"
+      >
+        ☰
+      </button>
+
+    </div>
+  </header>
+
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+
+    <a href="#home">الرئيسية</a>
+    <a href="#categories">الأقسام</a>
+    <a href="#listings">الإعلانات</a>
+    <a href="#about">عن سوقنا</a>
+
+    <button
+      class="btn btn-primary"
+      id="mobileAddListingButton"
+      type="button"
+    >
+      + أضف إعلاناً
+    </button>
+
+    <button
+      class="btn btn-outline"
+      id="mobileLoginButton"
+      type="button"
+    >
+      تسجيل الدخول
+    </button>
+
+  </div>
+
+
+  <!-- Hero -->
+  <main id="home">
+
+    <section class="hero">
+
+      <div class="hero-content">
+
+        <span class="hero-badge">
+          🛍️ سوقك الإلكتروني
+        </span>
+
+        <h1>
+          بيع، اشترِ، واكتشف
+          <span>كل ما تحتاجه</span>
+        </h1>
+
+        <p>
+          سوقنا منصة عربية للإعلانات المبوبة،
+          تساعدك على بيع وشراء المنتجات والخدمات
+          بسهولة وسرعة.
+        </p>
+
+        <!-- Search -->
+        <div class="search-box">
+
+          <input
+            type="search"
+            id="searchInput"
+            placeholder="ماذا تبحث عنه؟"
+            autocomplete="off"
+          />
+
+          <select id="categoryFilter">
+
+            <option value="">
+              كل الأقسام
+            </option>
+
+            <option value="cars">
+              السيارات
+            </option>
+
+            <option value="real-estate">
+              العقارات
+            </option>
+
+            <option value="phones">
+              الجوالات والأجهزة اللوحية
+            </option>
+
+            <option value="electronics">
+              الإلكترونيات
+            </option>
+
+            <option value="services">
+              الخدمات
+            </option>
+
+            <option value="fashion">
+              ملابس وأزياء
+            </option>
+
+            <option value="jobs">
+              وظائف
+            </option>
+
+            <option value="other">
+              أخرى
+            </option>
+
+          </select>
+
+          <button
+            class="btn btn-primary search-button"
+            id="searchButton"
+            type="button"
+          >
+            🔍 بحث
+          </button>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- Categories -->
+    <section
+      class="section"
+      id="categories"
+    >
+
+      <div class="section-header">
+
+        <div>
+          <span class="section-label">
+            اكتشف
+          </span>
+
+          <h2>
+            تصفح الأقسام
+          </h2>
+        </div>
+
+        <button
+          class="text-button"
+          id="viewAllCategoriesButton"
+          type="button"
+        >
+          عرض الكل ←
+        </button>
+
+      </div>
+
+
+      <div
+        class="categories-grid"
+        id="categoriesGrid"
+      >
+
+        <button
+          class="category-card"
+          data-category="cars"
+          type="button"
+        >
+          <span class="category-icon">🚗</span>
+          <span class="category-name">السيارات</span>
+        </button>
+
+
+        <button
+          class="category-card"
+          data-category="real-estate"
+          type="button"
+        >
+          <span class="category-icon">🏠</span>
+          <span class="category-name">العقارات</span>
+        </button>
+
+
+        <button
+          class="category-card"
+          data-category="phones"
+          type="button"
+        >
+          <span class="category-icon">📱</span>
+          <span class="category-name">
+            الجوالات والأجهزة
+          </span>
+        </button>
+
+
+        <button
+          class="category-card"
+          data-category="electronics"
+          type="button"
+        >
+          <span class="category-icon">💻</span>
+          <span class="category-name">
+            الإلكترونيات
+          </span>
+        </button>
+
+
+        <button
+          class="category-card"
+          data-category="services"
+          type="button"
+        >
+          <span class="category-icon">🛠️</span>
+          <span class="category-name">
+            الخدمات
+          </span>
+        </button>
+
+
+        <button
+          class="category-card"
+          data-category="fashion"
+          type="button"
+        >
+          <span class="category-icon">👕</span>
+          <span class="category-name">
+            ملابس وأزياء
+          </span>
+        </button>
+
+
+        <button
+          class="category-card"
+          data-category="jobs"
+          type="button"
+        >
+          <span class="category-icon">💼</span>
+          <span class="category-name">
+            وظائف
+          </span>
+        </button>
+
+
+        <button
+          class="category-card"
+          data-category="other"
+          type="button"
+        >
+          <span class="category-icon">📦</span>
+          <span class="category-name">
+            أخرى
+          </span>
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- Listings -->
+    <section
+      class="section listings-section"
+      id="listings"
+    >
+
+      <div class="section-header">
+
+        <div>
+          <span class="section-label">
+            جديد
+          </span>
+
+          <h2>
+            أحدث الإعلانات
+          </h2>
+        </div>
+
+        <select
+          id="sortSelect"
+          class="sort-select"
+        >
+          <option value="newest">
+            الأحدث
+          </option>
+
+          <option value="price-low">
+            السعر: من الأقل
+          </option>
+
+          <option value="price-high">
+            السعر: من الأعلى
+          </option>
+        </select>
+
+      </div>
+
+
+      <div
+        class="listings-grid"
+        id="listingsGrid"
+      >
+
+        <!-- Listing 1 -->
+        <article
+          class="listing-card"
+          data-category="cars"
+        >
+
+          <div class="listing-image">
+            🚗
+
+            <span class="listing-badge">
+              مميز
+            </span>
+          </div>
+
+          <div class="listing-content">
+
+            <span class="listing-category">
+              السيارات
+            </span>
+
+            <h3>
+              سيارة للبيع بحالة ممتازة
+            </h3>
+
+            <p class="listing-location">
+              📍 بغداد
+            </p>
+
+            <div class="listing-footer">
+
+              <strong>
+                15,000 $
+              </strong>
+
+              <span>
+                اليوم
+              </span>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- Listing 2 -->
+        <article
+          class="listing-card"
+          data-category="phones"
+        >
+
+          <div class="listing-image">
+            📱
+          </div>
+
+          <div class="listing-content">
+
+            <span class="listing-category">
+              الجوالات
+            </span>
+
+            <h3>
+              هاتف ذكي جديد
+            </h3>
+
+            <p class="listing-location">
+              📍 أربيل
+            </p>
+
+            <div class="listing-footer">
+
+              <strong>
+                500 $
+              </strong>
+
+              <span>
+                اليوم
+              </span>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- Listing 3 -->
+        <article
+          class="listing-card"
+          data-category="real-estate"
+        >
+
+          <div class="listing-image">
+            🏠
+          </div>
+
+          <div class="listing-content">
+
+            <span class="listing-category">
+              العقارات
+            </span>
+
+            <h3>
+              شقة للبيع في موقع مميز
+            </h3>
+
+            <p class="listing-location">
+              📍 دمشق
+            </p>
+
+            <div class="listing-footer">
+
+              <strong>
+                80,000 $
+              </strong>
+
+              <span>
+                أمس
+              </span>
+
+            </div>
+
+          </div>
+
+        </article>
+
+
+        <!-- Listing 4 -->
+        <article
+          class="listing-card"
+          data-category="electronics"
+        >
+
+          <div class="listing-image">
+            💻
+          </div>
+
+          <div class="listing-content">
+
+            <span class="listing-category">
+              الإلكترونيات
+            </span>
+
+            <h3>
+              لابتوب للبيع
+            </h3>
+
+            <p class="listing-location">
+              📍 عمّان
+            </p>
+
+            <div class="listing-footer">
+
+              <strong>
+                700 $
+              </strong>
+
+              <span>
+                أمس
+              </span>
+
+            </div>
+
+          </div>
+
+        </article>
+
+      </div>
+
+
+      <div
+        class="empty-state"
+        id="emptyState"
+        hidden
+      >
+
+        <div class="empty-icon">
+          🔍
+        </div>
+
+        <h3>
+          لم نجد أي إعلان
+        </h3>
+
+        <p>
+          جرّب البحث بكلمات مختلفة أو اختر قسماً آخر.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- Call To Action -->
+    <section class="cta-section">
+
+      <div class="cta-content">
+
+        <h2>
+          لديك شيء تريد بيعه؟
+        </h2>
+
+        <p>
+          انشر إعلانك الآن ووصل إلى آلاف المشترين.
+        </p>
+
+        <button
+          class="btn btn-primary btn-large"
+          id="ctaAddListingButton"
+          type="button"
+        >
+          + أضف إعلاناً مجانياً
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- About -->
+    <section
+      class="section about-section"
+      id="about"
+    >
+
+      <div class="about-content">
+
+        <span class="section-label">
+          عن سوقنا
+        </span>
+
+        <h2>
+          سوقنا، مكانك للبيع والشراء
+        </h2>
+
+        <p>
+          نعمل على بناء منصة عربية سهلة وآمنة
+          للإعلانات المبوبة، حيث يمكن للجميع
+          نشر إعلاناتهم واكتشاف المنتجات والخدمات
+          المتاحة بالقرب منهم.
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+
+    <div class="footer-container">
+
+      <div class="footer-brand">
+
+        <h2>
+          سوقنا
+        </h2>
+
+        <p>
+          منصة الإعلانات المبوبة العربية.
+        </p>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <a href="#home">
+          الرئيسية
+        </a>
+
+        <a href="#categories">
+          الأقسام
+        </a>
+
+        <a href="#listings">
+          الإعلانات
+        </a>
+
+        <a href="#about">
+          عن سوقنا
+        </a>
+
+      </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+      <p>
+        © 2026 سوقنا. جميع الحقوق محفوظة.
+      </p>
+
+    </div>
+
+  </footer>
+
+
+  <!-- Login Modal -->
+  <div
+    class="modal"
+    id="loginModal"
+    hidden
+  >
+
+    <div class="modal-overlay"></div>
+
+    <div class="modal-content">
+
+      <button
+        class="modal-close"
+        id="loginModalClose"
+        type="button"
+        aria-label="إغلاق"
+      >
+        ×
+      </button>
+
+      <h2>
+        تسجيل الدخول
+      </h2>
+
+      <p>
+        قم بتسجيل الدخول للوصول إلى حسابك.
+      </p>
+
+      <form id="loginForm">
+
+        <label for="loginEmail">
+          البريد الإلكتروني
+        </label>
+
+        <input
+          type="email"
+          id="loginEmail"
+          placeholder="example@email.com"
+          required
+        />
+
+        <label for="loginPassword">
+          كلمة المرور
+        </label>
+
+        <input
+          type="password"
+          id="loginPassword"
+          placeholder="كلمة المرور"
+          required
+        />
+
+        <button
+          type="submit"
+          class="btn btn-primary btn-full"
+        >
+          تسجيل الدخول
+        </button>
+
+      </form>
+
+      <p class="modal-note">
+        سيتم ربط تسجيل الدخول مع Supabase لاحقاً.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <!-- Add Listing Modal -->
+  <div
+    class="modal"
+    id="addListingModal"
+    hidden
+  >
+
+    <div class="modal-overlay"></div>
+
+    <div class="modal-content">
+
+      <button
+        class="modal-close"
+        id="addListingModalClose"
+        type="button"
+        aria-label="إغلاق"
+      >
+        ×
+      </button>
+
+      <h2>
+        أضف إعلاناً
+      </h2>
+
+      <p>
+        أنشئ إعلانك الجديد بسهولة.
+      </p>
+
+      <form id="addListingForm">
+
+        <label for="listingTitle">
+          عنوان الإعلان
+        </label>
+
+        <input
+          type="text"
+          id="listingTitle"
+          placeholder="مثال: سيارة للبيع"
+          required
+        />
+
+        <label for="listingCategory">
+          القسم
+        </label>
+
+        <select
+          id="listingCategory"
+          required
+        >
+
+          <option value="">
+            اختر القسم
+          </option>
+
+          <option value="cars">
+            السيارات
+          </option>
+
+          <option value="real-estate">
+            العقارات
+          </option>
+
+          <option value="phones">
+            الجوالات
+          </option>
+
+          <option value="electronics">
+            الإلكترونيات
+          </option>
+
+          <option value="services">
+            الخدمات
+          </option>
+
+          <option value="fashion">
+            ملابس وأزياء
+          </option>
+
+          <option value="jobs">
+            وظائف
+          </option>
+
+          <option value="other">
+            أخرى
+          </option>
+
+        </select>
+
+        <label for="listingPrice">
+          السعر
+        </label>
+
+        <input
+          type="number"
+          id="listingPrice"
+          placeholder="0"
+          min="0"
+        />
+
+        <label for="listingDescription">
+          الوصف
+        </label>
+
+        <textarea
+          id="listingDescription"
+          rows="4"
+          placeholder="اكتب وصف الإعلان..."
+        ></textarea>
+
+        <button
+          type="submit"
+          class="btn btn-primary btn-full"
+        >
+          نشر الإعلان
+        </button>
+
+      </form>
+
+      <p class="modal-note">
+        سيتم حفظ الإعلانات في Supabase بعد ربط قاعدة البيانات.
+      </p>
+
+    </div>
+
+  </div>
+
+
+  <!-- JavaScript -->
+  <script src="app.js"></script>
+
+</body>
+  
+</html>
