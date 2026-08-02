@@ -1,0 +1,17 @@
+backend/
+├── package.json
+├── .env
+├── config/
+│   └── db.js
+├── routes/
+│   └── .gitkeep
+├── controllers/
+│   └── .gitkeep
+├── models/
+│   └── .gitkeep
+├── middleware/
+│   └── .gitkeep
+├── uploads/
+│   └── .gitkeep
+└── utils/
+    └── .gitkeep
