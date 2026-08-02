@@ -1,0 +1,12 @@
+backend/
+├── server.js
+├── package.json
+├── .env
+├── config/
+│   └── db.js
+├── routes/
+├── controllers/
+├── models/
+├── middleware/
+├── uploads/
+└── utils/
